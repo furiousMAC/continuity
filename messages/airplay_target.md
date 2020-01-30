@@ -7,7 +7,7 @@ their presence to Apple devices that are actively seeking to send media to them.
 
 
 <div align="center">
-![airplay target format](/figs/airplay_target_format.png)
+<img src="/figs/airplay_target_format.png">
 </div>
 
 <p>The message fields, observed values and their meaning:</p>

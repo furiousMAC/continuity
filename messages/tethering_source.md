@@ -9,7 +9,7 @@ has. Some of this information is listed in the "available WiFi networks" listed
 on the Tethering Target device when searching for the hotspot.</p>
 
 <div align="center">
-![tethering source](/figs/tethering_source_format.png)
+<img src="/figs/tethering_source_format.png">
 </div>
 
 

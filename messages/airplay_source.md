@@ -9,7 +9,7 @@ to be anything but 0x00. The message's purpose is unclear.
 
 
 <div align="center">
-![airplay source format](/figs/airplay_source_format.png)
+<img src"/figs/airplay_source_format.png">
 </div>
 
 <!-- Leave this line -->

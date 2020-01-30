@@ -16,7 +16,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-![proximity pairing format](/figs/proximity_pairing_format.png)
+<img src="/figs/proximity_pairing_format.png">
 </div>
 
 

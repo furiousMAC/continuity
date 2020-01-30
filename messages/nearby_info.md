@@ -9,7 +9,7 @@ regardless of user activity, and can be used to determine general usage states
 
 
 <div align="center">
-![nearby info message](../figs/nearby_info_format.png)
+<img src="/figs/nearby_info_format.png">
 </div>
 
 <!-- Leave this line -->

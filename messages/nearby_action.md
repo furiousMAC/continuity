@@ -27,7 +27,7 @@ message. The frame format of this particular message is given below; other
 the `Authentication Tag` field.
 
 <div align="center">
-![nearby action message](../figs/nearby_action_wifi_password_format.png)
+<img src="/figs/nearby_action_wifi_password_format.png">
 </div>
 
 <!-- Leave this line -->
