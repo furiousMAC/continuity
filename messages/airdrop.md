@@ -20,7 +20,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-![airdrop format](/figs/airdrop_format.png)
+<img src="/figs/airdrop_format.png">
 </div>
 
 
