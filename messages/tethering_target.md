@@ -13,7 +13,7 @@ type of cellular connection, and strength of cellular signal.
 </p>
 
 <div align="center">
-<img src="../figs/tethering_target_format.png">
+![tethering target format](/figs/tethering_target_format.png)
 </div>
 
 

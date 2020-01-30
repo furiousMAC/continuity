@@ -20,7 +20,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-![magic switch format](../figs/magic_switch_format.png)
+![magic switch format](/figs/magic_switch_format.png)
 </div>
 
 <p>The message fields, observed values and their meaning:</p>

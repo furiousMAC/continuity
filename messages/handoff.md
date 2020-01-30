@@ -17,7 +17,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-<img style="height:50%" src="../figs/handoff_format.png">
+![handoff format](/figs/handoff_format.png)
 </div>
 
 

@@ -15,7 +15,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-<img src="../figs/airprint_format.png">
+[!airprint format](/figs/airprint_format.png)
 </div>
 
 
