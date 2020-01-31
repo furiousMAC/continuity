@@ -30,7 +30,7 @@ time
 0x01 -- Indicates if this is the primary iCloud account device
 </li>
 <li>
-0x02 -- Indicates if device is being used as a hotspot
+0x02 -- Unknown
 </li>
 <li>
 0x04 -- Indicates whether AirDrop is enabled
