@@ -47,4 +47,10 @@ Protocols</a>.
 - <a href="messages/nearby_action.md">Nearby Action Message</a> 
 - <a href="messages/nearby_info.md">Nearby Info Message</a> 
 
+## Contributing Updates
+
+Apple updates Continuity frequently, adding both new fields and field values to
+existing message types, as well as new message types entirely when new releases
+of iOS and macOS are released. Help keep up to date by dropping us a line at <a
+mailto="furiousmac@protonmail.com">furiousMAC@protonmail.com</a>
 
