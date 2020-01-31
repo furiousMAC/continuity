@@ -13,7 +13,7 @@ Protocols</a>.
 </p>
 
 <div align="center">
-![hey siri format](/figs/hey_siri.png)
+<img src="/figs/hey_siri.png">
 </div>
 
 <p>The message fields, observed values and their meaning:</p>

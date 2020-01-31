@@ -14,7 +14,7 @@ about the device usage.
 
 
 <div align="center">
-![homekit format](/figs/homekit_format.png)
+<img src="/figs/homekit_format.png">
 </div>
 
 <!-- Leave this line -->
