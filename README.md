@@ -64,3 +64,16 @@ mailto="furiousmac@protonmail.com">furiousMAC@protonmail.com</a>
 The Continuity reverse engineering effort and Wireshark dissector were presented
 at ShmooCon 2020 on January 31, 2020. The slides from the presentation are <a
 href="shmoocon2020/shmoo20.pdf">here</a>.
+
+## Citations 
+
+* [Handoff All Your Privacy – A Review of Apple’s Bluetooth Low Energy Continuity Protocol, Martin Et al. ](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf)
+
+* [Discontinued Privacy: Personal Data Leaks in Apple Bluetooth-Low-Energy Continuity Protocols, Guillaume Celosia and Mathieu Cunche](https://petsymposium.org/2020/files/papers/issue1/popets-2020-0003.pdf)
+
+* [Hexway- APPLE BLEEE. EVERYONE KNOWS WHAT HAPPENS ON YOUR IPHONE](https://hexway.io/research/apple-bleee/)
+
+* [A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link, Stute Et al.](https://www.usenix.org/system/files/sec19fall_stute_prepub.pdf)
+
+* [Tracking Anonymized Bluetooth Devices, Becker Et al.](https://www.degruyter.com/downloadpdf/j/popets.2019.2019.issue-3/popets-2019-0036/popets-2019-0036.pdf)
+
