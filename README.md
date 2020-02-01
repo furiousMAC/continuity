@@ -47,10 +47,20 @@ Protocols</a>.
 - <a href="messages/nearby_action.md">Nearby Action Message</a> 
 - <a href="messages/nearby_info.md">Nearby Info Message</a> 
 
-## Contributing Updates
+## Wireshark Dissector
+
+The latest Wireshark dissectors can be found <a href="dissector">here</a>, as
+well as installation instructions <a href="dissector/INSTALL.md">here</a>.
+
+## Contributing Dissector Updates
 
 Apple updates Continuity frequently, adding both new fields and field values to
 existing message types, as well as new message types entirely when new releases
 of iOS and macOS are released. Help keep up to date by dropping us a line at <a
 mailto="furiousmac@protonmail.com">furiousMAC@protonmail.com</a>
 
+## ShmooCon 2020
+
+The Continuity reverse engineering effort and Wireshark dissector were presented
+at ShmooCon 2020 on January 31, 2020. The slides from the presentation are <a
+href="shmoocon2020/shmoo20.pdf">here</a>.
