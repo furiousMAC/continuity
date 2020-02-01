@@ -54,9 +54,7 @@ well as installation instructions <a href="dissector/INSTALL.md">here</a>.
 
 ## Contributing Dissector Updates
 
-Apple updates Continuity frequently, adding both new fields and field values to
-existing message types, as well as new message types entirely when new releases
-of iOS and macOS are released. Help keep up to date by dropping us a line at <a
+Apple updates Continuity frequently, adding new messages and field values. Help keep up to date by dropping us a line at <a
 mailto="furiousmac@protonmail.com">furiousMAC@protonmail.com</a>
 
 ## ShmooCon 2020
