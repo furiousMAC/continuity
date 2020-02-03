@@ -33,7 +33,7 @@ time
 0x02 -- Unknown
 </li>
 <li>
-0x04 -- Indicates whether AirDrop is enabled
+0x04 -- Indicates whether AirDrop Receiving is enabled
 </li>
 <li>
 0x08 -- Unused
