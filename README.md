@@ -12,10 +12,9 @@
 This is a project that seeks to understand the format
 and structure of Apple's proprietary "Continuity" BLE protocol. 
 It is a continuation of work conducted at the US Naval Academy during the fall
-of 2018 and spring of 2019, culminating in a paper -- [Handoff All Your Privacy – A Review of Apple’s
+of 2018 and spring of 2019, culminating in a paper, [Handoff All Your Privacy – A Review of Apple’s
 Bluetooth Low Energy Continuity
-Protocol](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf)
--- at the 2019 [Privacy Enhancing Technologies
+Protocol](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf), at the 2019 [Privacy Enhancing Technologies
 Symposium](https://petsymposium.org/index.php) (PETS 2019) July 16–20, 2019 in
 Stockholm, Sweden and most recently in a [talk](https://shmoocon.org/speakers/#appleble) at ShmooCon 2020 (check out our website's [presentations](https://furiousmac.com/presentations/) section for the slides). While our paper investigates myriad privacy concerns arising
 from Apple's use of the Continuity protocol across its ecosystem, including the
