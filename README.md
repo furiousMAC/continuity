@@ -17,7 +17,7 @@ Bluetooth Low Energy Continuity
 Protocol](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf)
 -- at the 2019 [Privacy Enhancing Technologies
 Symposium](https://petsymposium.org/index.php) (PETS 2019) July 16–20, 2019 in
-Stockholm, Sweden. While our paper investigates myriad privacy concerns arising
+Stockholm, Sweden and most recently in a [presentation](https://shmoocon.org/speakers/#appleble) at ShmooCon 2020 (check out our website's [presentations](https://furiousmac.com/presentations/) section for the slides). While our paper investigates myriad privacy concerns arising
 from Apple's use of the Continuity protocol across its ecosystem, including the
 ability to track devices despite the use of randomized BD_ADDRs, this project is
 focused on the reverse engineering of the Continuity protocol
