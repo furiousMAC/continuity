@@ -5,7 +5,7 @@
 
 
 <div align="center" height=60px width=60px>
-<img src="https://github.com/furiousMAC/continuity/blob/master/figs/fp.png" alt="A dolphin shooting WiFi from an Uzi" height="80" width="80">
+<img src="https://github.com/furiousMAC/continuity/blob/master/figs/fp.png" alt="A dolphin shooting WiFi from an Uzi" height="120">
 </div>
 
 This is a project that seeks to understand the format
