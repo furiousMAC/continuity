@@ -4,7 +4,7 @@
 </div>
 
 
-<div align="center" height=100px width=100px | width=100>
+<div align="center" height=100px width=100px | width=70>
 
 ![alt text](figs/fp.png "A dolphin shooting WiFi from an Uzi")
 </div>
