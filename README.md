@@ -6,7 +6,7 @@
 
 <div align="center" height=60px width=60px>
 
-![alt text](figs/fp.png "A dolphin shooting WiFi from an Uzi")
+![alt text](figs/fp.png "A dolphin shooting WiFi from an Uzi" =60x60)
 </div>
 
 This is a project that seeks to understand the format
