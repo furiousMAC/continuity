@@ -5,8 +5,7 @@
 
 
 <div align="center" height=60px width=60px>
-
-![](figs/fp.png | width=60)
+<img src="figs/fp.png" alt="A dolphin shooting WiFi from an Uzi" height="42" width="42">
 </div>
 
 This is a project that seeks to understand the format
