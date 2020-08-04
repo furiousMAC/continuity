@@ -52,8 +52,7 @@ well as installation instructions <a href="dissector/INSTALL.md">here</a>.
 
 ## Contributing Dissector Updates
 
-Apple updates Continuity frequently, adding new messages and field values. Help keep up to date by dropping us a line at <a
-mailto="furiousmac@protonmail.com">furiousMAC@protonmail.com</a>
+Apple updates Continuity frequently, adding new messages and field values. Help keep up to date by dropping us a line via our protonmail.com email address, mailbox FuriousMAC.
 
 ## ShmooCon 2020
 
