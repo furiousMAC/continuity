@@ -1,7 +1,7 @@
-<h1>Airplay Destination Message</h1>
+<h1>Airplay Target Message</h1>
 
 <p> 
-The Airplay Destination messages are sent by Airplay compatible devices to advertise
+The Airplay Target messages are sent by Airplay compatible devices to advertise
 their presence to Apple devices that are actively seeking to send media to them.
 </p>
 
@@ -11,7 +11,7 @@ their presence to Apple devices that are actively seeking to send media to them.
 </div>
 
 
-## AirPlay Destination Message (btcommon.apple.type == 0x09)
+## AirPlay Target Message (btcommon.apple.type == 0x09)
 | Field Name                                  | Info                         | Example                   |Length| Type  | Notes                    |
 | :-------------------------------------------| :----------------------------|:--------------------------|:----:|:-----:|:------------------------:|
 | btcommon.apple.airplay.flags                | AirPlay Flags                |   03                      |   1  | Bytes | Needs more work          |
@@ -22,7 +22,7 @@ their presence to Apple devices that are actively seeking to send media to them.
 
 <ul>
 <li>
-Type: 1 byte, 0x09 -- indicates an Airplay Destination message
+Type: 1 byte, 0x09 -- indicates an Airplay Target message
 </li>
 <li>
 Length: 1 byte, 0x06 -- number of bytes in message payload
