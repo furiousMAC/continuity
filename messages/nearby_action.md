@@ -30,7 +30,7 @@ the `Authentication Tag` field.
 <img src="/figs/nearby_action_wifi_password_format.png">
 </div>
 
-## Nearby Action (WiFi Join) Message (btcommon.apple.type == 0x0f)
+## Nearby Action Message (btcommon.apple.type == 0x0f)
 | Field Name                                  | Info                         | Example                    |Length| Type  | Notes                            |
 | :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:--------------------------------:|
 | btcommon.apple.nearbyaction.flags           | Nearby Action Flags          | 40                         | 1    | Bytes | Auth Tag bit. Not sure about others|   
