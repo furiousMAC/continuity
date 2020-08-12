@@ -26,15 +26,15 @@ Protocols</a>.
 
 
 ## AirDrop Message (btcommon.apple.type == 0x05)
-| Field Name                                  | Info                                        | Example          |Length| Type | Notes                      |
-| :-------------------------------------------| :-------------------------------------------|:-----------------|:----:|:----:|:--------------------------:|
-| btcommon.apple.airdrop.prefix               | Prefix for AirdDrop message                 |0000000000000000  |   8  | Bytes|                            |
-| btcommon.apple.airdrop.version              | AirDrop Version                             | 01               |   1  | Bytes| Version of AirDrop?        |
-| btcommon.apple.airdrop.appleid              | First 2 bytes SHA256(AppleID)               | 6e2e             |   2  | Bytes|                            |
-| btcommon.apple.airdrop.phone                | First 2 bytes SHA256(Phone Number)          | f7ad             |   2  | Bytes|                            |
-| btcommon.apple.airdrop.email                | First 2 bytes SHA256(Email)                 | 09b2             |   2  | Bytes|                            |
-| btcommon.apple.airdrop.email2               | First 2 bytes SHA256(Email 2)               | 2080             |   2  | Bytes|                            |
-| btcommon.apple.airdrop.suffix               | Sufffix of AirDrop message                  | 00               |   1  | Bytes|                            |
+| Field Name                                  | Info                                        | Example           |Length| Type | Notes                      |
+| :-------------------------------------------| :-------------------------------------------|:-----------------:|:----:|:----:|:--------------------------:|
+| btcommon.apple.airdrop.prefix               | Prefix for AirdDrop message                 |0000000000000000   |   8  | Bytes|                            |
+| btcommon.apple.airdrop.version              | AirDrop Version                             | 01                |   1  | Bytes| Version of AirDrop?        |
+| btcommon.apple.airdrop.appleid              | First 2 bytes SHA256(AppleID)               | 6e2e              |   2  | Bytes|                            |
+| btcommon.apple.airdrop.phone                | First 2 bytes SHA256(Phone Number)          | f7ad              |   2  | Bytes|                            |
+| btcommon.apple.airdrop.email                | First 2 bytes SHA256(Email)                 | 09b2              |   2  | Bytes|                            |
+| btcommon.apple.airdrop.email2               | First 2 bytes SHA256(Email 2)               | 2080              |   2  | Bytes|                            |
+| btcommon.apple.airdrop.suffix               | Sufffix of AirDrop message                  | 00                |   1  | Bytes|                            |
 
 <p>The message fields, observed values and their meaning:</p>
 
