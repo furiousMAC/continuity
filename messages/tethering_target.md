@@ -19,16 +19,8 @@ type of cellular connection, and strength of cellular signal.
 
 <p>The message fields, observed values and their meaning:</p>
 
-<ul>
-<li>
-Type: 1 byte, 0x0D -- indicates a Tethering Target message
-</li>
-<li>
-Length: 1 byte, 0x04-- number of bytes in the message payload
-</li>
-<li>
-Identifier: 4 bytes, variable -- An identifier tied to a user's Destination
-Signaling IDentifier (DSID) that rotates on a 24-hour cycle. This identifier can
-be used to track a user despite the use of random BD_ADDR.
-</li>
-</ul>
+## Tethering Target (Wi-Fi Settings Page) Message (btcommon.apple.type == 0x0d)
+| Field Name                                  | Info                         | Example                   |Length| Type  | Notes      |
+| :-------------------------------------------| :----------------------------|:--------------------------|:----:|:-----:|:----------:|
+| btcommon.apple.tethtgt.icloudid               | iCloud ID                    |  67f36d01                 |  4   | Bytes | Derived from user's iCloud DSID. Rotates every 24 hours. Constant across all devices on same iCloud Account|
+
