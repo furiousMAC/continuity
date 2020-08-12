@@ -58,7 +58,7 @@ Undefined: 1 byte, 0x01
 Device Model: 2 bytes
 </li>
 <li>
-UTP/Status: 1 byte -- Indicates the position of the airPods (ear/case)
+Status: 1 byte -- Indicates the position of the airPods (ear/case)
 </li>
 <li>
 Battery Level: 1 byte -- airPod Battery Level Indicator, where the 4 MSBits are
