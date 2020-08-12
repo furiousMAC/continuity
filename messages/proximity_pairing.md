@@ -20,8 +20,6 @@ Protocols</a>.
 </div>
 
 
-<p>The message fields, observed values and their meaning:</p>
-
 ## AirPods Message (btcommon.apple.type == 0x07)
 
 | Field Name                                  | Info                         | Example                   |Length| Type  | Notes                    |
@@ -43,3 +41,43 @@ Protocols</a>.
 | btcommon.apple.airpods.charingstatus        | Charging Status Byte         | 8f                        |   1  | None  | This is a tree           |
 | btcommon.apple.airpods.casebatterystatus    | Case Battery Level Byte      | 8f                        |   1  | None  | This is a tree           |
 | btcommon.apple.airpods.batterychargingstatus| Battery and Charging Status Bytes|888f                   |   2  | None  | This is a tree           |
+
+<p>The message fields, observed values and their meaning:</p>
+
+<ul>
+<li>
+Type: 1 byte, 0x07 -- indicates a Proximity Pairing message
+</li>
+<li>
+Length: 1 byte, variable -- number of bytes in the message
+</li>
+<li>
+Undefined: 1 byte, 0x01
+</li>
+<li>
+Device Model: 2 bytes
+</li>
+<li>
+UTP/Status: 1 byte -- Indicates the position of the airPods (ear/case)
+</li>
+<li>
+Battery Level: 1 byte -- airPod Battery Level Indicator, where the 4 MSBits are
+the right battery and the 4 LSbits are the left battery.
+</li>
+<li>
+Power Charging Status and Battery Case Level: 1 byte -- Battery case and the Left/Right
+airPod Charging status, and the airPod case battery level
+</li>
+<li>
+Lid Open Counter: 1 byte
+</li>
+<li>
+Device Color: 1 byte
+</li>
+<li>
+Undefined: 1 byte, 0x00
+</li>
+<li>
+Encrypted Payload: 16 bytes
+</li>
+</ul>
