@@ -13,13 +13,14 @@ on the Tethering Target device when searching for the hotspot.</p>
 </div>
 
 ## Tethering Source (Instant Hotspot) Message (btcommon.apple.type == 0x0e)
-| Field Name                                  | Info                         | Example                   |Length| Type  | Notes                            |
-| :-------------------------------------------| :----------------------------|:--------------------------|:----:|:-----:|:--------------------------------:|
-| btcommon.apple.tethsrc.version              | Version                      |     01                    |  1   | Bytes |Note sure what this pertains to   |
-| btcommon.apple.tethsrc.flags                | Flags                        |     00                    |  1   | Bytes |Note sure what these flags mean   |
-| btcommon.apple.tethsrc.battery              | Battery Life (%)             |     87                    |  1   | UINT8 |                                  |
-| btcommon.apple.tethsrc.celltype             | Cellular Connection Type     |     LTE (7)               |  2   | UINT8 |                                  |
-| btcommon.apple.tethsrc.cellbars             | Cell Service Quality (Bars)  |     5                     |  1   | UINT8 |                                  |
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                            |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:--------------------------------:|
+| btcommon.apple.tethsrc.version              | Version                      |     01                     |  1   | Bytes |Note sure what this pertains to   |
+| btcommon.apple.tethsrc.flags                | Flags                        |     00                     |  1   | Bytes |Note sure what these flags mean   |
+| btcommon.apple.tethsrc.battery              | Battery Life (%)             |     87                     |  1   | UINT8 |                                  |
+| btcommon.apple.tethsrc.celltype             | Cellular Connection Type     |     LTE (7)                |  2   | UINT8 |                                  |
+| btcommon.apple.tethsrc.cellbars             | Cell Service Quality (Bars)  |     5                      |  1   | UINT8 |                                  |
+
 
 
 <p>The message fields, observed values and their meaning:</p>
