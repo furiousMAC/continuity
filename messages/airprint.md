@@ -21,29 +21,12 @@ Protocols</a>.
 
 <p>The message fields, observed values and their meaning:</p>
 
-<ul>
-<li>
-Type: 1 byte, 0x03 -- indicates an AirPrint message
-</li>
-<li>
-Length: 1 byte, 0x16 -- number of bytes in the message payload
-</li>
-<li>
-Address Type: 1 byte
-</li>
-<li>
-Path Resource Type: 1 byte
-</li>
-<li>
-Security Type: 1 byte
-</li>
-<li>
-QID or TCP Port: 2 bytes
-</li>
-<li>
-IPv4/6 Address: 16 bytes
-</li>
-<li>
-Measured Power: 1 byte
-</li>
-</ul>
+
+- Type: 1 byte, 0x03 -- indicates an AirPrint message (```btcommon.apple.type == 0x03```)
+- Length: 1 byte, 0x16 -- number of bytes in the message payload (```btcommon.apple.length```)
+- Address Type: 1 byte (```btcommon.apple.airprint.addrtype```)
+- Path Resource Type: 1 byte (```btcommon.apple.airprint.resourcepathtype```)
+- Security Type: 1 byte (```btcommon.apple.airprint.securitytype```)
+- QID or TCP Port: 2 bytes (```btcommon.apple.airprint.qidport```)
+- IPv4/6 Address: 16 bytes (```btcommon.apple.airprint.ipaddr```)
+- Measured Power: 1 byte (```btcommon.apple.airprint.power```)
