@@ -29,7 +29,7 @@ Protocols</a>.
 ## AirDrop Message (btcommon.apple.type == 0x05)
 | Field Name                                  | Info                                        | Example          |Length| Type | Notes                      |
 | :-------------------------------------------| :-------------------------------------------|:-----------------|:----:|:----:|:--------------------------:|
-| btcommon.apple.airdrop.prefix               | Prefix for AirdDrop message                 |000000000000000001|   8  | Bytes|                            |
+| btcommon.apple.airdrop.prefix               | Prefix for AirdDrop message                 |000000000000000001|   9  | Bytes| The last byte might mean something|
 | btcommon.apple.airdrop.appleid              | First 2 bytes SHA256(AppleID)               | 6e2e             |   2  | Bytes|                            |
 | btcommon.apple.airdrop.phone                | First 2 bytes SHA256(Phone Number)          | f7ad             |   2  | Bytes|                            |
 | btcommon.apple.airdrop.email                | First 2 bytes SHA256(Email)                 | 09b2             |   2  | Bytes|                            |
