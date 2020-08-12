@@ -9,7 +9,7 @@ has. Some of this information is listed in the "available WiFi networks" listed
 on the Tethering Target device when searching for the hotspot.</p>
 
 <div align="center">
-<img src="/figs/tethering_source_format.png">
+<img src="/figs/tethering_source.png">
 </div>
 
 ## Tethering Source (Instant Hotspot) Message (btcommon.apple.type == 0x0e)
