@@ -41,9 +41,6 @@ Flags: 1 byte, variable -- Not sure what these flags mean
 Battery life: 1 byte, 0x0-0x64 -- Tethering Source battery percentage 
 </li>
 <li>
-Data: 1 byte, variable -- unknown
-</li>
-<li>
 Cell service type: 1 byte
   <ul>
     <li>
