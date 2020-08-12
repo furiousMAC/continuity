@@ -26,7 +26,7 @@ Protocols</a>.
 | :-------------------------------------------| :----------------------------|:--------------------------|:----:|:-----:|:------------------------:|
 | btcommon.apple.airpods.prefix               | Prefix for AirPods messages  |01                         |   1  | Bytes |                          |
 | btcommon.apple.airpods.devicemodel          | Device model                 |AirPods Pro (0x0e20)       |   2  | UINT16|                          |
-| btcommon.apple.airpods.status               | Device Status                |Both AirPods in case (0x55)|   2  | UINT8 |                          |
+| btcommon.apple.airpods.status               | Device Status                |Both AirPods in case (0x55)|   1  | UINT8 |                          |
 | btcommon.apple.airpods.leftbattery          | Battery of Left Pod (x10%)   | 9                         |   1  | UINT8 | Have seen > 100%         |       
 | btcommon.apple.airpods.rightbattery         | Battery of Right Pod (x10%)  | 9                         |   1  | UINT8 | Have seen > 100%         |
 | btcommon.apple.airpods.casecharging         | Whether the case is charging | No (0x0)                  |   1  | UINT8 |                          |
