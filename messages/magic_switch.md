@@ -29,4 +29,4 @@ Protocols</a>.
 | Field Name                                  | Info                         | Example                   |Length| Type  | Notes                 |
 | :-------------------------------------------| :----------------------------|:--------------------------|:----:|:-----:|:---------------------:|
 | btcommon.apple.magicswitch.data             | Data                         |    c4b5                   |  2   | Bytes | Not sure what this is |
-| btcommon.apple.magicswitch.confidence       | Confidence on Wrist          |    On Wirst (0x3f)        |      | UINT8 |                       |
+| btcommon.apple.magicswitch.confidence       | Confidence on Wrist          |    On Wirst (0x3f)        |  1   | UINT8 |                       |
