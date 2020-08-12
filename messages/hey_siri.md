@@ -16,7 +16,6 @@ Protocols</a>.
 <img src="/figs/hey_siri.png">
 </div>
 
-<p>The message fields, observed values and their meaning:</p>
 
 ## Hey Siri Message (btcommon.apple.type == 0x08)
 | Field Name                                  | Info                         | Example                   |Length| Type  | Notes                       |
@@ -26,3 +25,29 @@ Protocols</a>.
 | btcommon.apple.siri.confidence              | Confidence Level             |   00                      |   1  | Bytes | Not sure what scale is used |
 | btcommon.apple.siri.deviceclass             | Device Class                 | Homepod (0x0007)          |   2  | UINT16|                             |
 | btcommon.apple.siri.randbyte                | Random Byte                  |   ca                      |   1  | Bytes | Not sure the purpose of this|
+
+<p>The message fields, observed values and their meaning:</p>
+
+<ul>
+<li>
+Type: 1 byte, 0x08 -- indicates a "Hey Siri" message
+</li>
+<li>
+Length: 1 byte, 0x07 -- number of bytes in message payload
+</li>
+<li>
+Perceptual Hash: 2 bytes -- perceptual hash of the user's voice command
+</li>
+<li>
+SNR: 1 byte
+</li>
+<li>
+Confidence: 1 byte
+</li>
+<li>
+Device Class: 2 bytes
+</li>
+<li>
+Random Byte: 1 byte
+</li>
+</ul>
