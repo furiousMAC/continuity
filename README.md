@@ -36,7 +36,7 @@ Protocols</a>.
 - <a href="messages/homekit.md">HomeKit Message</a> 
 - <a href="messages/proximity_pairing.md">Proximity Pairing Message</a> 
 - <a href="messages/hey_siri.md">"Hey Siri" Message</a> 
-- <a href="messages/airplay_target.md">Airplay Destination Message</a> 
+- <a href="messages/airplay_target.md">Airplay Target Message</a> 
 - <a href="messages/airplay_source.md">Airplay Source Message</a> 
 - <a href="messages/magic_switch.md">Magic Switch Message</a>
 - <a href="messages/handoff.md">Handoff Message</a> 
