@@ -10,4 +10,4 @@ Version [3.2.6](https://github.com/furiousMAC/continuity/tree/dev/dissector/3.2.
 
 ### Older Dissector Versions.
 
-Version [3.2.1](https://github.com/furiousMAC/continuity/tree/dev/dissector/3.2.1) and Version [3.0.8](https://github.com/furiousMAC/continuity/tree/dev/dissector/3.0.8) contain Windows installers, but based off of the original dissector that we released at Shmoocon. This means that all of the changes outlined in the [change log](https://github.com/furiousMAC/continuity/blob/dev/dissector/CHANGELOG.md) have not been added to these versions and should not be used. 
+Version [3.2.1](https://github.com/furiousMAC/continuity/tree/dev/dissector/3.2.1) and Version [3.0.8](https://github.com/furiousMAC/continuity/tree/dev/dissector/3.0.8) contain Windows installers, but are based off of the original dissector that we released at Shmoocon in January 2020. This means that all of the changes outlined in the [change log](https://github.com/furiousMAC/continuity/blob/dev/dissector/CHANGELOG.md) have not been added to these versions and should not be used. 
