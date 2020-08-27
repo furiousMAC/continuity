@@ -18,7 +18,6 @@ Protocols</a>.
 <div align="center">
 <img src="/figs/proximity_pairing_format.png">
 </div>
-
 ## AirPods Message (btcommon.apple.type == 0x07)
 
 | Field Name                                  | Info                         | Example                    |Length| Type  | Notes                    |
@@ -28,9 +27,9 @@ Protocols</a>.
 | btcommon.apple.airpods.status               | Device Status                |Both AirPods in case (0x55) |   1  | UINT8 |                          |
 | btcommon.apple.airpods.leftbattery          | Battery of Left Pod (x10%)   | 9                          |   1  | UINT8 | Have seen > 100%         |       
 | btcommon.apple.airpods.rightbattery         | Battery of Right Pod (x10%)  | 9                          |   1  | UINT8 | Have seen > 100%         |
-| btcommon.apple.airpods.casecharging         | Whether the case is charging | No (0x0)                   |   1  | UINT8 |                          |
-| btcommon.apple.airpods.rightcharging        | Whether right pod is charging| Yes (0x1)                  |   1  | UINT8 |                          |
-| btcommon.apple.airpods.leftcharging         | Whether left pod is charging | Yes (0x1)                  |   1  | UINT8 |                          |
+| btcommon.apple.airpods.casecharging         | Whether the case is charging | No (0x0)                   |   1  | BOOL  |                          |
+| btcommon.apple.airpods.rightcharging        | Whether right pod is charging| Yes (0x1)                  |   1  | BOOL  |                          |
+| btcommon.apple.airpods.leftcharging         | Whether left pod is charging | Yes (0x1)                  |   1  | BOOL  |                          |
 | btcommon.apple.airpods.casebattery          | Battery of case (x10%)       | 7                          |   1  | UINT8 | Have seen > 100%         |
 | btcommon.apple.airpods.opencount            | Counter for opening lid      | 57                         |   1  | UINT8 | Weird counter            |
 | btcommon.apple.airpods.devicecolor          | Device Color                 | White (0x00)               |   1  | UINT8 | Changes for beats        |               
