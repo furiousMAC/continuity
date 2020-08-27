@@ -12,6 +12,28 @@ regardless of user activity, and can be used to determine general usage states
 <img src="/figs/nearby_info_format.png">
 </div>
 
+## Nearby Info Message (btcommon.apple.type == 0x10)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                              |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:----------------------------------:|
+| btcommon.apple.nearbyinfo.statusflags       | Nearby Info Status Flags     | 0x03                       | 1    | UINT8 |                                    |
+| btcommon.apple.nearbyinfo.unk.flag          | Unknown Flag                 | Off (0x0)                  | 1    | BOOL  | Not sure about this flagg          |
+| btcommon.apple.nearbyinfo.primary_device    | Primary Device Flag          | No (0x0)                   | 1    | BOOL  |                                    |
+| btcommon.apple.nearbyinfo.unk.flag2         | Unknown Flag                 | Off (0x0)                  | 1    | BOOL  | Seen with iOS 11                   |
+| btcommon.apple.nearbyinfo.airdrop_status    | AirDrop Receiving Status Flag| Off (0x0)                  | 1    | BOOL  |                                    |
+| btcommon.apple.nearbyinfo.action_code       | Action Code                  | Locked Phone (3)           | 1    | UINT8 |                                    |
+| btcommon.apple.nearbyinfo.dataflags         | Data Flags                   | 0x1c                       | 1    | UINT8 |                                    | 
+| btcommon.apple.nearbyinfo.authtag_present   | Auth Tag Present Flag        | Yes (0x1)                  | 1    | BOOL  |                                    | 
+| btcommon.apple.nearbyinfo.watch_locked      | Watch Locked Flag            | No (0x0)                   | 1    | BOOL  | Not sure about this flag           |
+| btcommon.apple.nearbyinfo.autounlock_watch  | Auto Unlock Watch Flag       | No (0x0)                   | 1    | BOOL  | Not sure about this flag           |
+| btcommon.apple.nearbyinfo.autounlock_enabled| Auto Unlock Flag             | No (0x0)                   | 1    | BOOL  | Not sure about this flag           |
+| btcommon.apple.nearbyinfo.unk.flag3         | Unknown Flag                 | On (0x1)                   | 1    | BOOL  | Not sure about this flag           | 
+| btcommon.apple.nearbyinfo.wifi_status       | WiFi Status                  | On (0x1)                   | 1    | BOOL  |                                    |
+| btcommon.apple.nearbyinfo.authtag.fourbyte  | 4 Byte Auth Tag              | No (0x0)                   | 1    | BOOL  |                                    | 
+| btcommon.apple.nearbyinfo.airpod.connection | AirPods Connection Status    | No (0x0)                   | 1    | BOOL  | This needs more teseting           | 
+| btcommon.apple.nearbyinfo.os                | iOS Version                  | iOS 12.x                   | 1    | String|                                    |
+| btcommon.apple.nearbyinfo.auth              | Auth Tag                     | 839096                     | 3    | Bytes |                                    | 
+| btcommon.apple.nearbyinfo.postauth          | Post Auth Tag Data           | 80                         | 1    | Bytes | Seen in newer iPhones (X, Xs, 11)  |
+
 <!-- Leave this line -->
 <p>The message fields, observed values and their meaning:</p>
 
@@ -36,7 +58,7 @@ time
 0x04 -- Indicates whether AirDrop Receiving is enabled
 </li>
 <li>
-0x08 -- Unused
+0x08 -- Unknown
 </li>
 </ul>
 </li>
@@ -76,22 +98,32 @@ Action Code: 4 bits  -- indicates the action state of the device
 </li>
 </ul>
 <li>
-iOS Dependent: 1 byte
+Status Flags: 8 bits -- Used as a bitmask, more than one may be enabled at any
+time
 <ul>
 <li>
-0x00 -- Observed in iOS 10; meaning unclear
+0x01 -- Indicates if AirPods are connected and the screen is on
 </li>
 <li>
-0x10 -- Observed in iOS 11; meaning unclear
+0x02 -- Indicates if the Authentication Tag is 4 bytes 
 </li>
 <li>
-0x0C -- Observed in iOS 12 when joining WiFi network
+0x04 -- Indicates whether WiFi is on or off
 </li>
 <li>
-0x18 -- Observed in iOS 12 when WiFi is off
+0x08 --Unknown
 </li>
 <li>
-0x01 -- Observed in iOS 12 when WiFi is on
+0x10 -- Indicates whether the Authentication Tag is present or not
+</li>
+<li>
+0x20 -- Indicates whether the Apple Watch is locked or not
+</li>
+<li>
+0x40 --  Indicates whether Auto Unlock on the Apple Watch is enabled or not
+</li>
+<li>
+0x80 -- Indicates whether Auto Unlock is enabled or not  
 </li>
 </ul>
 </li>
