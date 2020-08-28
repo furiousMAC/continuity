@@ -9,8 +9,18 @@ has. Some of this information is listed in the "available WiFi networks" listed
 on the Tethering Target device when searching for the hotspot.</p>
 
 <div align="center">
-<img src="/figs/tethering_source_format.png">
+<img src="/figs/tethering_source.png">
 </div>
+
+## Tethering Source (Instant Hotspot) Message (btcommon.apple.type == 0x0e)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                            |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:--------------------------------:|
+| btcommon.apple.tethsrc.version              | Version                      |     01                     |  1   | Bytes |Note sure what this pertains to   |
+| btcommon.apple.tethsrc.flags                | Flags                        |     00                     |  1   | Bytes |Note sure what these flags mean   |
+| btcommon.apple.tethsrc.battery              | Battery Life (%)             |     87                     |  1   | UINT8 |                                  |
+| btcommon.apple.tethsrc.celltype             | Cellular Connection Type     |     LTE (7)                |  2   | UINT16|                                  |
+| btcommon.apple.tethsrc.cellbars             | Cell Service Quality (Bars)  |     5                      |  1   | UINT8 |                                  |
+
 
 
 <p>The message fields, observed values and their meaning:</p>
@@ -23,16 +33,16 @@ Type: 1 byte, 0x0E -- indicates a Tethering Source message
 Length: 1 byte, 0x06 -- number of bytes in the message payload
 </li>
 <li>
-Data: 2 bytes, variable -- unknown, potentially encrypted data
+Version: 1 byte, variable -- Not sure what this version pertains to
 </li>
+<li>
+Flags: 1 byte, variable -- Not sure what these flags mean
+ </li>
 <li>
 Battery life: 1 byte, 0x0-0x64 -- Tethering Source battery percentage 
 </li>
 <li>
-Data: 1 byte, variable -- unknown
-</li>
-<li>
-Cell service type: 1 byte
+Cell service type: 2 bytes
   <ul>
     <li>
         0 -- 4G (GSM)

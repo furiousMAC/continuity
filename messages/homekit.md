@@ -17,6 +17,18 @@ about the device usage.
 <img src="/figs/homekit_format.png">
 </div>
 
+## HomeKit Message (btcommon.apple.type == 0x06)(This needs more work)
+
+| Field Name                                  | Info                                        | Example           |Length| Type | Notes                      |
+| :-------------------------------------------| :-------------------------------------------|:-----------------:|:----:|:----:|:--------------------------:|
+| btcommon.apple.homekit.status               | Status Flags                                |01                 |   1  | Bytes| Not sure what th flags mean|
+| btcommon.apple.homekit.deviceid             | Device ID                                   |222022f38f01       |   6  | Bytes|                            |
+| btcommon.apple.homekit.category             | Category                                    |Range Extender (0x1000)|   2  | UINT16|                      |
+| btcommon.apple.homekit.globalstatenum       | Global State Number                         | fa92              |   2  | Bytes| Don't know what this is    |
+| btcommon.apple.homekit.date                 | Unkown Data (maybe encrypted)               | 02                |   12 | Bytes| Don't know what this is    |
+| btcommon.apple.homekit.confignum            | Configuration Number                        | 02                |   1  | Bytes| Don't know what this is    |
+| btcommon.apple.homekit.compver              | Compatible Version                          | c7                |   1  | Bytes| Don't know what this is    |
+
 <!-- Leave this line -->
 <p>The message fields, observed values and their meaning:</p>
 

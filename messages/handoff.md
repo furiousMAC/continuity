@@ -21,6 +21,14 @@ Protocols</a>.
 </div>
 
 
+## Handoff Message (btcommon.apple.type == 0x0c)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                 |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:---------------------:|
+| btcommon.apple.handoff.copy                 | Copy/Cut Performed           |  No (0x0)                  |  1   | BOOL  |                       |
+| btcommon.apple.handoff.seqnum               | IV (Sequence Number)         |  23113                     |  2   | UINT16|                       |
+| btcommon.apple.handoff.authtag              | AES-GCM Auth Tag             |  48                        |  1   | Bytes |                       |
+| btcommon.apple.handoff.encdata              | Encrypted Handoff Data       | f28a1927bd62fd895b5a       |  10  | Bytes |                       |
+
 <p>The message fields, observed values and their meaning:</p>
 
 <ul>

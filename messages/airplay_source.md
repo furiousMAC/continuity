@@ -13,6 +13,12 @@ to be anything but 0x00. The message's purpose is unclear.
 </div>
 
 <!-- Leave this line -->
+
+## AirPlay Source Message (btcommon.apple.type == 0x0a)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                    |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:------------------------:|
+| btcommon.apple.airplay.data                 | Unknown AirPlay Source Data  | 00                         | 1    | Bytes | Only seen to be 0x00     |
+
 <p>The message fields, observed values and their meaning:</p>
 
 <ul>

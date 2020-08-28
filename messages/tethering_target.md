@@ -17,6 +17,11 @@ type of cellular connection, and strength of cellular signal.
 </div>
 
 
+## Tethering Target (Wi-Fi Settings Page) Message (btcommon.apple.type == 0x0d)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes      |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:----------:|
+| btcommon.apple.tethtgt.icloudid               | iCloud ID                    |  67f36d01                |  4   | Bytes | Derived from user's iCloud DSID. Rotates every 24 hours. Constant across all devices on same iCloud Account|
+
 <p>The message fields, observed values and their meaning:</p>
 
 <ul>
@@ -32,3 +37,4 @@ Signaling IDentifier (DSID) that rotates on a 24-hour cycle. This identifier can
 be used to track a user despite the use of random BD_ADDR.
 </li>
 </ul>
+

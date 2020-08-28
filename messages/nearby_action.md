@@ -30,6 +30,22 @@ the `Authentication Tag` field.
 <img src="/figs/nearby_action_wifi_password_format.png">
 </div>
 
+## Nearby Action Message (btcommon.apple.type == 0x0f)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                            |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:--------------------------------:|
+| btcommon.apple.nearbyaction.flags           | Nearby Action Flags          | 40                         | 1    | Bytes | Auth Tag bit. Not sure about others|   
+| btcommon.apple.nearybaction.flags.authtag   | Auth Tag Flag                | Absent                     | 1    | Bool  |                                    |
+| btcommon.apple.nearbyaction.type            | Nearby Action Type           | Wi-Fi Password (0x08)      | 1    | UINT8 |Not all types dissect properly      |
+| btcommon.apple.nearbyaction.auth            | Auth Tag                     | 390087                     | 3    | Bytes | 390087                             |
+| btcommon.apple.nearbyaction.wifijoin.ssid   |First 3 bytes SHA256(SSID)    |f9575b                      | 3    | Bytes |                                    |
+| btcommon.apple.nearbyaction.wifijoin.appleid|First 3 bytes SHA256(Apple ID)| 3455e6                     | 3    | Bytes |                                    | 
+| btcommon.apple.nearbyaction.wifijoin.phonenumber|First 3 bytes SHA256(Phone Number)|395504              | 3    | Bytes |                                    |
+| btcommon.apple.nearbyaction.wifijoin.email  |First 3 bytes SHA256(Email)   | 09fc87                     | 3    | Bytes |                                    | 
+| btcommon.apple.nearbyaction.setup.device_class| Device Class               | iPhone (0x2)               | 1    | UINT8 |                                    |
+| btcommon.apple.nearbyaction.setup.device_model| Device Model               | D22 (X, Xs, XSMax) (0x1)   | 1    | UINT8 |                                    |
+| btcommon.apple.nearbyaction.setup.device_color| Device Color               | Black (0x1)                | 1    | UINT8 |                                    |
+| btcommon.apple.nearbyaction.setup.msg_ver     | Message Version            | 10                         | 1    | UINT8 | Might be protocol version? Not sure|
+| btcommon.apple.nearbyaction_data              | Unknown Data               |8bdab64875208f0c7280ae0599350000632fc5| Varies| Bytes| Used for unknown sub types|
 <!-- Leave this line -->
 <p>The message fields, observed values and their meaning:</p>
 

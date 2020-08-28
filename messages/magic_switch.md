@@ -23,6 +23,13 @@ Protocols</a>.
 <img src="/figs/magic_switch_format.png">
 </div>
 
+## Magic Switch Message (btcommon.apple.type == 0x0b)
+| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                 |
+| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:---------------------:|
+| btcommon.apple.magicswitch.data             | Data                         |    c4b5                    |  2   | Bytes | Not sure what this is |
+| btcommon.apple.magicswitch.confidence       | Confidence on Wrist          |    On Wirst (0x3f)         |  1   | UINT8 |                       |
+
+
 <p>The message fields, observed values and their meaning:</p>
 
 <ul>
