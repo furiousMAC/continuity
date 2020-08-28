@@ -1,8 +1,8 @@
-# Major Changes to Wireshark Dissector Since Shmoocon Public Releas
+# Major Changes to Wireshark Dissector Since Shmoocon Public Release
 
 ## General Dissector Changes
 1. **Printing "Company ID: Apple" Twice**
-    - Got rid of line of code that caused "Company ID: Apple, Inc" to be printed out twice in the GUI
+    - Got rid of the line of code that caused "Company ID: Apple, Inc" to be printed out twice in the GUI
 2. **Changed MacOS Detection Byte**
     - MacOS does not relate back to the old "iOS dependent byte" anymore, but rather is just a string in the GUI.
     
