@@ -153,12 +153,12 @@
 | btcommon.apple.nearbyinfo.postauth          | Post Auth Tag Data           | 80                         | 1    | Bytes | Seen in newer iPhones (X, Xs, 11)  |
 
 ## Find My Message (btcommon.apple.type == 0x12)
-| Field Name                                  | Info                         | Example                    |Length| Type  | Notes                               |
-| :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:-----------------------------------:|
-| btcommon.apple.findmy.prefix                | Prefix for Find My Message   | 00                         | 1    | Bytes | Have only seen 0x00                 |
-| btcommon.apple.findmy.data                  | Unknown Data                 | 57364dc7fb77866c40c91076603cb37c1f59f923ab3a|22|Bytes|Not sure what this is    |
-| btcommon.apple.findmy.counter               | Counter                      | 03                         | 1    | Bytes| Have only seen 0x00, 0x01, 0x02, 0x03|
-| btcommon.apple.findmy.suffix                | Suffix for Find My Message   | 00                         | 1    | Bytes |Have only seen 0x00                 |
-| btcommon.apple.findmy.flags                 | Find My Flags                | 1c                         | 1    | Bytes | Not sure about these. When len(msg)=5|
-| btcommon.apple.findmy.authtag               | Auth Tag                     | 3fe830                     | 3    | Bytes | Only when len(msg)=5                |
+| Field Name                             | Info                             | Example                    |Length| Type  | Notes                                   |
+| :--------------------------------------| :--------------------------------|:--------------------------:|:----:|:-----:|:---------------------------------------:|
+| btcommon.apple.findmy.status           | Owner Connection & Battery Status| 00                         | 1    | UINT8 | Have only seen 0x00                     |
+| btcommon.apple.findmy.publickey        | Bytes 6-27 of Public Key         | 57364dc7fb77866c40c91076603cb37c1f59f923ab3a|22|Bytes|                              |
+| btcommon.apple.findmy.publickey.bits   | Bits 6-7 of Byte 0 of Public Key|  03                         | 1    | UINT8| Only bits 0-1 used; Bits 2-7 are reserved|
+| btcommon.apple.findmy.hint             | Byte 5 of BT_ADDR of Primary key | 00                         | 1    | UINT8 |Have only seen 0x00                      |
+| btcommon.apple.findmy.publickey.xcord  | 28-byte x-coord of Public Key    | b953267519a8ef5b0bdea8bc5bf80bd0ee47e7d68b2bb8319cbbee0|28|STRING|                  |
+
  
