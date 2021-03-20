@@ -2,7 +2,7 @@
 
 <p>  At the 2019 Worldwide Developer Conference (WWDC19), Apple introduced Offline Finding, a
 proprietary protocol and crowd-sourced sensor network comprised of millions of
-iOS and macOS devices. This protocol was first reverse engineered by Heinrich et al. in [Who Can Find My Devices? Security and Privacy of Apple’s Crowd-Sourced Bluetooth Location Tracking System](https://arxiv.org/pdf/2103.02282.pdf). The Find My message is broadcast by apple devices that are marked as lost by the user or that do not have internet connectivity. 
+iOS and macOS devices. This protocol was first reverse engineered by Heinrich et al. in <a href="https://arxiv.org/pdf/2103.02282.pdf">Who Can Find My Devices? Security and Privacy of Apple’s Crowd-Sourced Bluetooth Location Tracking System</a>. The Find My message is broadcast by apple devices that are marked as lost by the user or that do not have internet connectivity. 
 This message includes the x-coordinate of the currently active elliptic curve public key for the disconnected device. Because BLE
 advertisements are limited to 31 total bytes, some of which are used to encode the company identifier and other metadata, Apple encodes part of the key in the
 BLE Advertising Address, with the remaining public key included in the advertisement payload. When a nearby internet-connected apple device sees this BLE message, it 
@@ -34,7 +34,8 @@ Type: 1 byte, 0x12 -- indicates a Find My message
 Length: 1 byte, 0x19-- number of bytes in the message payload
 </li>
 <li>
-Status: 1 byte, 0x00-- Owner Connection & Battery Status. Maintained bit (bit 2) set if owner connected within current key rotationperiod (15 minutes). If Maintained bit set, then bits 6-7 shows full, medium, low, or critically low battery.
+Status: 1 byte, 0x00-- Owner Connection & Battery Status. Maintained bit (bit 2) set if owner connected within current key rotation
+period (15 minutes). If Maintained bit set, then bits 6-7 shows full, medium, low, or critically low battery.
 </li>
 <li>
 Public Key: 22 bytes, 0x57364dc7fb77866c40c91076603cb37c1f59f923ab3a-- Bytes 6-27 of the x-coordinate of the public key. 
