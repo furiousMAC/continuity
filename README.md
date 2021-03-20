@@ -44,6 +44,7 @@ Protocols</a>.
 - <a href="messages/tethering_source.md">Tethering Source Message</a> 
 - <a href="messages/nearby_action.md">Nearby Action Message</a> 
 - <a href="messages/nearby_info.md">Nearby Info Message</a> 
+- <a href="messages/findmy.md">Find My Message</a> 
 
 ## Wireshark Dissector
 
@@ -62,13 +63,14 @@ href="shmoocon2020/shmoo20.pdf">here</a>. The full talk is also posted on [YouTu
 
 ## Citations 
 
-* [Handoff All Your Privacy – A Review of Apple’s Bluetooth Low Energy Continuity Protocol, Martin Et al. ](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf)
+* [Handoff All Your Privacy – A Review of Apple’s Bluetooth Low Energy Continuity Protocol, Martin et al. ](https://petsymposium.org/2019/files/papers/issue4/popets-2019-0057.pdf)
 
 * [Discontinued Privacy: Personal Data Leaks in Apple Bluetooth-Low-Energy Continuity Protocols, Guillaume Celosia and Mathieu Cunche](https://petsymposium.org/2020/files/papers/issue1/popets-2020-0003.pdf)
 
 * [Hexway- APPLE BLEEE. EVERYONE KNOWS WHAT HAPPENS ON YOUR IPHONE](https://hexway.io/research/apple-bleee/)
 
-* [A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link, Stute Et al.](https://www.usenix.org/system/files/sec19fall_stute_prepub.pdf)
+* [A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link, Stute et al.](https://www.usenix.org/system/files/sec19fall_stute_prepub.pdf)
 
-* [Tracking Anonymized Bluetooth Devices, Becker Et al.](https://www.degruyter.com/downloadpdf/j/popets.2019.2019.issue-3/popets-2019-0036/popets-2019-0036.pdf)
+* [Tracking Anonymized Bluetooth Devices, Becker et al.](https://www.degruyter.com/downloadpdf/j/popets.2019.2019.issue-3/popets-2019-0036/popets-2019-0036.pdf)
 
+* [Who Can Find My Devices? Security and Privacy of Apple’s Crowd-Sourced Bluetooth Location Tracking System, Heinrich et al.](https://arxiv.org/pdf/2103.02282.pdf)
