@@ -9239,6 +9239,7 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
             /* vvv furiousmac vvv */
             /* Changed  to proto_tree_add_item_ret_uint() for macOS detection */
             proto_tree_add_item_ret_uint(entry_tree, hf_btcommon_eir_ad_flags_reserved, tvb, offset, 1, ENC_NA, &apple_os_flag);
+            /* ^^^ furiousmac ^^^ */
             proto_tree_add_item(entry_tree, hf_btcommon_eir_ad_flags_le_bredr_support_host, tvb, offset, 1, ENC_NA);
             proto_tree_add_item(entry_tree, hf_btcommon_eir_ad_flags_le_bredr_support_controller, tvb, offset, 1, ENC_NA);
             proto_tree_add_item(entry_tree, hf_btcommon_eir_ad_flags_bredr_not_support, tvb, offset, 1, ENC_NA);
