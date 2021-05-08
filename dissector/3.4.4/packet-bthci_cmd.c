@@ -912,7 +912,10 @@ static gint hf_btcommon_apple_nearbyinfo_auth = -1;
 static gint hf_btcommon_apple_nearbyinfo_postauth = -1;
 
 /* 18 - Find My Message */
+static gint hf_btcommon_apple_findmy_state = -1;
 static gint hf_btcommon_apple_findmy_status = -1;
+static gint hf_btcommon_apple_findmy_maintained = -1;
+static gint hf_btcommon_apple_findmy_battery = -1;
 static gint hf_btcommon_apple_findmy_publickey = -1;
 static gint hf_btcommon_apple_findmy_publickeybits = -1;
 static gint hf_btcommon_apple_findmy_hint = -1;
@@ -1391,11 +1394,22 @@ static const value_string wrist_confidence_vals[] = {
 
 static const value_string findmy_status_vals[] = {
     { 0x00, "Owner did not connect within key rotation period (15 min.)" }, 
-    { 0xe4, "Owner connected with key roation period, Battery Critically Low" }, 
-    { 0xa4, "Owner connected with key roation period, Battery Low" },
-    { 0x64, "Owner connected with key roation period, Battery Medium" },
+    { 0xe4, "Owner connected within key roation period, Battery Critically Low" }, 
+    { 0xa4, "Owner connected within key roation period, Battery Low" },
+    { 0x64, "Owner connected within key roation period, Battery Medium" },
     { 0x24, "Owner connected with key roation period, Battery Full" },
-    { 0, NULL}
+};
+
+static const value_string findmy_maintained_vals[] = {
+    { 0x00, "Owner did not connect within key rotation period (15 min.)" }, 
+    { 0x01, "Owner connected within key rotation period (15 min.)" },
+};
+
+static const value_string findmy_battery_vals[] = {
+    { 0x00, "Full"},
+    { 0x01, "Medium"}, 
+    { 0x02, "Low"}, 
+    { 0x03, "Critically Low"}
 };
 
 static const value_string findmy_publickeybits_vals[] = {
@@ -9991,7 +10005,9 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                                 for(int i = 0; i < 6; i++){
                                     pubKey[i] = *(unsigned char *)(((char *)(src_addr->data))+i);       
                                 }
-                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_status, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_string(tlv_tree, hf_btcommon_apple_findmy_state, tvb, offset, 0, "Separated");
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_maintained, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_battery, tvb, offset, 1, ENC_NA);
                                 proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_publickey, tvb, offset+1, 22, ENC_NA);
                                 proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_findmy_publickeybits, tvb, offset + 23, 1, ENC_NA, &pubKeyBits);
                                 proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_hint, tvb, offset + 24, 1, ENC_NA);
@@ -10005,8 +10021,18 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
 			        proto_tree_add_string(tlv_tree, hf_btcommon_apple_findmy_publickeyxcoord, tvb, 0, 0, publicKeyStr);
                                 wmem_free(WMEM_ALLOCATOR_SIMPLE, publicKeyStr);
                             }
+                            /* Not in spec
+                            else if(a_length == 5){
+                                proto_tree_add_string(tlv_tree, hf_btcommon_apple_findmy_state, tvb, offset, 0, "Nearby");
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_maintained, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_battery, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_findmy_publickeybits, tvb, offset + 1, 1, ENC_NA, &pubKeyBits);
+               
+                            }*/
                             else if(a_length == 2){
-                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_status, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_string(tlv_tree, hf_btcommon_apple_findmy_state, tvb, offset, 0, "Nearby");
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_maintained, tvb, offset, 1, ENC_NA);
+                                proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_battery, tvb, offset, 1, ENC_NA);
                                 proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_findmy_publickeybits, tvb, offset + 1, 1, ENC_NA, &pubKeyBits);
                
                             }
@@ -10823,9 +10849,24 @@ proto_register_btcommon(void)
             NULL, HFILL }
         },
         /* 18 - Find My Message */
+        { &hf_btcommon_apple_findmy_state,
+          { "Find My State", "btcommon.apple.findmy.state",
+            FT_STRING, BASE_NONE, NULL, 0x0,
+            NULL, HFILL }
+        },
         { &hf_btcommon_apple_findmy_status,
-          { "FindMy Status", "btcommon.apple.findmy.status",
+          { "Find My Status", "btcommon.apple.findmy.status",
             FT_UINT8, BASE_HEX, findmy_status_vals, 0xe4,
+            NULL, HFILL }
+        },
+        { &hf_btcommon_apple_findmy_maintained,
+          { "Find My Maintained Status", "btcommon.apple.findmy.maintained",
+            FT_UINT8, BASE_HEX, findmy_maintained_vals, 0x04,
+            NULL, HFILL }
+        },
+        { &hf_btcommon_apple_findmy_battery,
+          { "Battery Level", "btcommon.apple.findmy.battery",
+            FT_UINT8, BASE_HEX, findmy_battery_vals, 0xc0,
             NULL, HFILL }
         },
         { &hf_btcommon_apple_findmy_publickey,
