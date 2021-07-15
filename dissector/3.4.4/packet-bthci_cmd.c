@@ -1241,21 +1241,20 @@ static const value_string apple_vals[] = {
 static const value_string action_vals[] = {
     {  0, "Activity Level Unknown" },
     {  1, "Activity Reporting Disabled (Recently Updated/iPhone Setup)" },
-    {  2, "Apple iOS 13.6 Bug" },
+    {  2, "Unknown" },
     {  3, "Locked Phone" },
-    {  4, "Apple iOS 13.6 Bug" },
+    {  4, "Unknown" },
     {  5, "Audio is Playing with Screen off" }, /* Never Observed */
-    {  6, "Apple iOS 13.6 Bug" },
+    {  6, "Unknown" },
     {  7, "Transition to Inactive User or from Locked Screen" },
-    {  8, "Apple iOS 13.6 Bug" },
+    {  8, "Unknown" },
     {  9, "Screen is on and Video is playing" }, /* Never Observed */
     { 10, "Locked Phone; Push Notifications to Watch" },
     { 11, "Active User" },
-    { 12, "Apple iOS 13.6 Bug" },
+    { 12, "Unknown" },
     { 13, "User is Driving a Vehicle (CarPlay)"},
     { 14, "Phone/FaceTime Call" },
-    { 15, "Apple iOS 13.6 Bug" },
-    { 16, "Apple iOS 13.6 Bug" },
+    { 15, "Encrypted" }, // Set 0xff as default value for >= iOS13
 };
 
 static const value_string cellular_type_vals[] = {
@@ -9220,7 +9219,7 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
     guint8       bd_addr[6];
     guint8      *name = NULL;
     /* vvv furiousmac vvv */
-    guint32      apple_os_flag;
+    guint32      apple_os_flag = 0;
     guint32      iOS_13_flag = 0;
     /* ^^^ furiousmac ^^^ */
     bluetooth_uuid_t uuid;
@@ -9731,7 +9730,7 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                         os_set = 1;
 		    }
 		    else if(iOS_13_flag == 1 && os_set == 0){ /* if iOS13 and OS not set yet */
-                        proto_tree_add_string(tlv_tree, hf_btcommon_apple_nearbyinfo_os, tvb, offset, 1, "iOS 13.x");
+                        proto_tree_add_string(tlv_tree, hf_btcommon_apple_nearbyinfo_os, tvb, offset, 1, "iOS 13.x/14.x/15.x");
                         os_set = 1;
 		    } 
                     switch(a_type){
@@ -9899,7 +9898,12 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                             //     Face recognition capability (turning face recognition on/off does not toggle bit)
                             //     This could be not having no home button (not tested on  iPhone X/XR/XS, only iPhone 11
                             proto_tree_add_item(tlv_tree, hf_btcommon_apple_nearbyinfo_primary_device, tvb, offset, 1, ENC_NA);
-                            proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_nearbyinfo_action_code, tvb, offset, 1, ENC_NA, &action_code_val);
+                            if(iOS_13_flag == 1){
+                                proto_tree_add_uint(tlv_tree,hf_btcommon_apple_nearbyinfo_action_code, tvb, offset, 1, 0xff);
+                            } 
+                            else{
+                                proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_nearbyinfo_action_code, tvb, offset, 1, ENC_NA, &action_code_val);
+                            }
                             offset += 1; 
                             a_length -= 1;
                             
