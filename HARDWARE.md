@@ -1,6 +1,16 @@
 # HARDWARE
 
-## Nordic nRF51 (recommended)
+
+## Nordic nRF52840 (recommended)
+
+1. Download nRF51 dongle [firmware files](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE/Download#infotabs)
+
+2. Program [the dongle](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nc_programmer%2FUG%2Fnrf_connect_programmer%2Fncp_programming_dongle.html)
+
+3. [Run](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_sniffer_ble%2FUG%2Fsniffer_ble%2Finstalling_sniffer_plugin.html) the sniffer with Wireshark
+
+
+## Nordic nRF51 
 
 1. Download nRF51 dongle [firmware files](https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF51-Dongle/Download#infotabs)
 
