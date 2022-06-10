@@ -3,7 +3,7 @@
 
 ## Nordic nRF52840 (recommended)
 
-1. Download nRF51 dongle [firmware files](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE/Download#infotabs)
+1. Download nRF52840 dongle [firmware files](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE/Download#infotabs)
 
 2. Program [the dongle](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nc_programmer%2FUG%2Fnrf_connect_programmer%2Fncp_programming_dongle.html)
 
