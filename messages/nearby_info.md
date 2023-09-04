@@ -16,7 +16,7 @@ regardless of user activity, and can be used to determine general usage states
 | Field Name                                  | Info                         | Example                    |Length| Type  | Notes                              |
 | :-------------------------------------------| :----------------------------|:--------------------------:|:----:|:-----:|:----------------------------------:|
 | btcommon.apple.nearbyinfo.statusflags       | Nearby Info Status Flags     | 0x03                       | 1    | UINT8 |                                    |
-| btcommon.apple.nearbyinfo.unk.flag          | Unknown Flag                 | Off (0x0)                  | 1    | BOOL  | Not sure about this flagg          |
+| btcommon.apple.nearbyinfo.unk.flag          | Unknown Flag                 | Off (0x0)                  | 1    | BOOL  | Not sure about this flag          |
 | btcommon.apple.nearbyinfo.primary_device    | Primary Device Flag          | No (0x0)                   | 1    | BOOL  |                                    |
 | btcommon.apple.nearbyinfo.unk.flag2         | Unknown Flag                 | Off (0x0)                  | 1    | BOOL  | Seen with iOS 11                   |
 | btcommon.apple.nearbyinfo.airdrop_status    | AirDrop Receiving Status Flag| Off (0x0)                  | 1    | BOOL  |                                    |
