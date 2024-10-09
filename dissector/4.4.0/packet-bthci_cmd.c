@@ -10362,7 +10362,7 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                             break;
                      	case 15:   /* Nearby Action */
                             if(a_length != 2){
-                                nearby_action_flags_check = tvb_get_guint8(tvb, offset) & 0x80;
+                                nearby_action_flags_check = tvb_get_uint8(tvb, offset) & 0x80;
 			        proto_tree_add_item(tlv_tree, hf_btcommon_apple_nearbyaction_flags, tvb, offset, 1, ENC_NA);
 			        proto_tree_add_item(tlv_tree, hf_btcommon_apple_nearbyaction_flags_authtag, tvb, offset, 1, ENC_NA);
 				proto_tree_add_item_ret_uint(tlv_tree, hf_btcommon_apple_nearbyaction_type, tvb, offset + 1, 1, ENC_NA, &nearbyaction_type_val);
@@ -10435,9 +10435,9 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                             // When screen off and airpods connected -> 0
                             // When screen off and airpods disconnected -> 0
  
-                            nearby_os_val = tvb_get_guint8(tvb, offset) & 0x0f;
-                            auth_tag_present = tvb_get_guint8(tvb, offset) & 0x10;
-                            four_byte_authtag = tvb_get_guint8(tvb, offset) & 0x02;
+                            nearby_os_val = tvb_get_uint8(tvb, offset) & 0x0f;
+                            auth_tag_present = tvb_get_uint8(tvb, offset) & 0x10;
+                            four_byte_authtag = tvb_get_uint8(tvb, offset) & 0x02;
 
                             if(os_set == 0){ //if OS not set yet (IE. not iOS13 based off Tx Power or MacOS)
                               if(auth_tag_present == 0){ //iOS 10 probably
@@ -10528,7 +10528,7 @@ dissect_eir_ad_data(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, bluetoo
                                 proto_tree_add_item(tlv_tree, hf_btcommon_apple_findmy_hint, tvb, offset + 24, 1, ENC_NA);
                                 pubKey[0] = ((((unsigned char)pubKeyBits) & 0x03) << 0x06) | (pubKey[0] & 0x3f);
                                 for(int i = 6; i < 28; i++){
-                                    pubKey[i] = (unsigned char) tvb_get_guint8(tvb, (offset+1+(i-6)));
+                                    pubKey[i] = (unsigned char) tvb_get_uint8(tvb, (offset+1+(i-6)));
                                 }
                                 for(int i = 0; i < 28; i++){
                                     g_snprintf((publicKeyStr+(i*2)), 3, "%02x", ((unsigned char) pubKey[i]));
