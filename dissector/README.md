@@ -1,9 +1,12 @@
 # Wireshark Dissectors for Apple's BLE Continuity Protocol
 
-- [Updated Dissector for Curent Stable Release 3.4.4](./3.4.4)
+- [Updated Dissector for Curent Stable Release 4.4.0](./4.4.0)
 
 
 ### Latest Dissector Versions
+
+
+Version [4.4.0](4.4.0) is now available. This version does not include any changes to the dissector itself and may not properly dissect Continuity messages from the lastest versions of iOS.
 
 Version [3.4.4](3.4.4) (Stable Release as of Mar 10, 2021) is currently the most up-to-date dissector for Apple's BLE Continuity Protocol. All of the changes since the initial Shmoocon release of the dissector can be seen in the [change log](CHANGELOG.md). All of the fields are also enumerated in the [fields](FIELDS.md) file. We currently do not have Windows installers for the newest set of changes.
 
