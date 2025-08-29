@@ -11330,7 +11330,7 @@ proto_register_btcommon(void)
             NULL, HFILL }
         },
         { &hf_btcommon_apple_nearbyinfo_airpod_conn,
-          { "AirPod Connecton Status", "btcommon.apple.nearbyinfo.airpod.connection",
+          { "AirPod Connection Status", "btcommon.apple.nearbyinfo.airpod.connection",
             FT_BOOLEAN, 8, TFS(&tfs_yes_no), 0x01,
             NULL, HFILL }
         },
