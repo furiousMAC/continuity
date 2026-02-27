@@ -55,7 +55,7 @@ well as installation instructions <a href="dissector/INSTALL.md">here</a>.
 
 Apple updates Continuity frequently, adding new messages and field values. Help keep up to date by dropping us a line via our protonmail.com email address, mailbox FuriousMAC.
 
-## ShmooCon 2020
+## ShmooCon 2020 2020 2020
 
 The Continuity reverse engineering effort and Wireshark dissector were presented
 at ShmooCon 2020 on January 31, 2020. The slides from the presentation are <a
